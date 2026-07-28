@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Static Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="icon" href="/assets/icons/favicon.ico">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Mending Services</a>
+      <a href="crochet.html">Crochet</a>
+      <a href="cosplay.html">Cosplay</a>
+      <a href="sashiko.html">About Sashiko</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <h1>birdiecraftspdx</h1>
+    <p class="tagline">Pay‑what‑you‑want mending with care</p>
+  </header>
+
+  <main class="page-body">
+<section class="contact-form">
+  <h2>Contact Me</h2>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+
+    <!-- Honeypot field -->
+    <p class="hidden">
+      <label>Don’t fill this out: <input name="bot-field"></label>
+    </p>
+
+    <label>
+      Your Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>
+      Your Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+    Mending Service Needed
+    <select name="mending-option" required>
+        <option value="">Select an option…</option>
+        <option>Button repair or replacement</option>
+        <option>Loose thread zap</option>
+        <option>Belt holes addition</option>
+        <option>Hook/eye closures or clasps</option>
+        <option>Seam repair or small tear</option>
+        <option>Patch for worn area or hole</option>
+        <option>Darning (socks or knit fabrics)</option>
+        <option>Jeans inner thigh reinforcement</option>
+        <option>Zipper repair or replacement</option>
+        <option>Simple alterations (hems, waist adjustment)</option>
+        <option>Jeans-to-jorts transformation</option>
+        <option>Convert a plushie into a bag or backpack</option>
+        <option>Other (describe below)</option>
+    </select>
+    </label>
+
+    <label>
+    Pick Up / Drop Off Preference
+    <select name="pickup-preference" required>
+        <option value="">Select a preference…</option>
+        <option>FREE: DIY in Beaverton</option>
+        <option>FREE: Beaverton/Aloha</option>
+        <option>$5: Portland Metro</option>
+    </select>
+    </label>
+
+    <label>
+    Additional Details
+    <textarea name="details" rows="5" placeholder="Tell me about the item, fabric, damage, or anything else I should know…"></textarea>
+    </label>
+
+
+    <button type="submit" class="contact-button">
+      Submit Request
+    </button>
+  </form>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Tori Vaz</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+<footer class="footer">
+  <h2 class="footer-heading">Get in Touch</h2>
+
+  <ul class="footer-contact">
+    <li><strong>Email:</strong> <a href="mailto:birdiecraftspdx@pm.me">birdiecraftspdx@pm.me</a></li>
+    <li><strong>Signal:</strong> @birdiecraftspdx.06</li>
+    <li><strong>Facebook Messenger:</strong>
+      <a href="https://www.facebook.com/profile.php?id=61592136643174" target="_blank">
+        birdiecraftspdx
+      </a>
+    </li>
+    <li><strong>Instagram:</strong>
+      <a href="https://www.instagram.com/birdiecraftspdx" target="_blank">
+        birdiecraftspdx
+      </a>
+    </li>
+  </ul>
+</footer>
+
+</body>
+</html>
