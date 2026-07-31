@@ -25,7 +25,10 @@
   margin-bottom: 0.5rem;
 }
 
-.gallery-item .caption {
-  font-size: 0.95rem;
-  color: var(--text-muted);
+.gallery-caption {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  font-style: italic;
 }

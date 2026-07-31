@@ -4,27 +4,23 @@ makemanifest() {
   dir="$1"
   MANIFEST_FILE="$dir/manifest.json"
 
-  # Use zsh globbing to find images safely
+  # Find images
   images=(${~dir}/*.(jpg|jpeg|png|webp)(N))
 
-  # Build JSON array
   json="["
   for img in $images; do
-    filename="${img:t}"   # :t = tail (basename)
-    json="$json\"$filename\","
+    filename="${img:t}"
+    json="$json{\"file\":\"$filename\",\"caption\":\"\"},"
   done
 
-  # Remove trailing comma if present
+  # Remove trailing comma
   json="${json%,}"
   json="$json]"
 
-  # Write manifest.json
   echo "$json" > "$MANIFEST_FILE"
-
   echo "Generated $MANIFEST_FILE with ${#images[@]} images."
 }
 
-# Mending gallery
 GALLERY_DIR="../gallery"
 
 makemanifest "$GALLERY_DIR/mending"
