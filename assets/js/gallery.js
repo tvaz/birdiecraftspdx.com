@@ -3,19 +3,26 @@ const galleryDir = scriptTag.dataset.galleryDir;
 
 fetch(`${galleryDir}/manifest.json`)
   .then(response => response.json())
-  .then(images => {
-    const mendingGalleryGrid = document.getElementById("gallery-grid");
+  .then(items => {
+    const galleryGrid = document.getElementById("gallery-grid");
 
-    images.forEach(file => {
+    items.forEach(entry => {
       const item = document.createElement("div");
       item.className = "gallery-item";
 
-      item.innerHTML = `
-        <img src="/assets/gallery/mending/${file}" alt="" loading="lazy">
-      `;
+      const img = document.createElement("img");
+      img.src = `${galleryDir}/${entry.file}`;
+      img.alt = entry.caption || "";
+      img.loading = "lazy";
 
-      mendingGalleryGrid.appendChild(item);
+      const caption = document.createElement("p");
+      caption.className = "gallery-caption";
+      caption.textContent = entry.caption || "";
+
+      item.appendChild(img);
+      item.appendChild(caption);
+
+      galleryGrid.appendChild(item);
     });
   })
   .catch(err => console.error("Gallery manifest load error:", err));
-
